@@ -39,7 +39,6 @@ def test_form():
     browser.element('[class="react-datepicker__year-select"]').click().element(f'[value="{year}"]').click()
     browser.element('[class ="react-datepicker__month-select"]').click().element(f'[value="{mount}"]').click()
     browser.element('[class="react-datepicker__week"]').click()
-    browser.element('[id="subjectsContainer"]')
     browser.element('[id="subjectsInput"]').type("English").press_tab()
     browser.element('[id="subjectsInput"]').type("Hindi").press_tab()
     browser.element('[for="hobbies-checkbox-2"]').click()
@@ -51,8 +50,6 @@ def test_form():
     browser.element('[id="react-select-4-input"]').type('Noida').press_tab()
     del_element('#fixedban')
     browser.element('[id="submit"]').click()
-
-
 
 def test_table():
     """добавить запись"""
