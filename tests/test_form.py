@@ -2,8 +2,8 @@ from selene.support.shared.jquery_style import s
 from Controls.check_final_table import FinalTable
 from Controls.datepicker import Datepicker
 from Controls.dropdown import Dropdown
-from Controls.path import absolut_path
-from Controls.remove_element import remove_element
+from utils.path import absolut_path
+from utils.remove_element import remove_element
 from Controls.tags_input import TagsInput
 from tests.conftest import *
 
