@@ -1,3 +1,4 @@
+from selene import command
 from selene.core.entity import Element
 from selene.support.shared.jquery_style import s
 
@@ -12,3 +13,6 @@ class Datepicker:
         s('.react-datepicker__year-select').s(f'[value="{year}"]').click()
         s('.react-datepicker__month-select').s(f'[value="{month}"]').click()
         s(f'.react-datepicker__day--0{day}').click()
+
+    def input_date(self, /, *, option: str):
+        self.element.perform(command.js.set_value(option)).click()
