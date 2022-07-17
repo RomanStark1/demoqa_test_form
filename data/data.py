@@ -11,15 +11,18 @@ month = str(9)
 year = str(1987)
 day = str(24)
 subject_english = 'English'
+subject_arts = 'Arts'
 picture = 'picture.jpg'
 adress = 'USA, Texas, Green Street 15'
 date = '24 Oct,1987'
+state = 'NCR'
+city = 'Noida'
 
 """вынес в переменные малоинформативные селекторы"""
 gender_male = 'gender-radio-1'
-hobbie_music = 'hobbies-checkbox-3'
-hobbie_sports = 'hobbies-checkbox-1'
-hobbie_reading = 'hobbies-checkbox-2'
+hobbie_music = 'Music'
+hobbie_sports = 'Sports'
+hobbie_reading = 'Reading'
 # input_state = '[id="react-select-3-input"]'
 # input_city = '[id="react-select-4-input"]'
 # input_subject = '[id="subjectsInput"]'

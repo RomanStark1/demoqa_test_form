@@ -1,3 +1,4 @@
+from selene import have
 from selene.support.shared import browser
 from Controls.datepicker import Datepicker
 from Controls.dropdown import Dropdown
@@ -32,13 +33,14 @@ class RegistrationForm:
          date_of_birth = Datepicker(s('#dateOfBirthInput'))
          date_of_birth.choose_date(year=year, month=month, day=day)
 
-    def set_subjects(self, value):
-        subjects = TagsInput(browser.element('#subjectsInput'))
-        subjects.autocomplete(value)
-        return self
+    def set_subjects(self, *values):
+        for value in values:
+            TagsInput(browser.element('#subjectsInput')).autocomplete(value)
 
-    def set_hobbie(self, value):
-        browser.element(f'[for="{value}"]').click()
+    def set_hobbie(self, *values):
+        for value in values:
+            browser.element('#hobbiesWrapper').all('.custom-checkbox').element_by(have.exact_text(value)).click()
+        return self
 
 
     def upload_picture(self, value):
